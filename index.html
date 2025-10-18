@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - Nguyễn Mạnh Hiền </title>
+
+  <!-- Link to local stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Basic meta for SEO -->
+  <meta name="description" content="Portfolio cá nhân mẫu - HTML + CSS, dark mode" />
+</head>
+<body>
+
+  <!--SITE WRAPPER-->
+  <div class="site">
+
+   <!-- HEADER / BANNER + NAVBAR -->
+    <header class="banner" id="home" aria-label="Banner và điều hướng">
+      <div class="banner-overlay">
+        <nav class="nav container" aria-label="Main navigation">
+          <div class="brand">Portfolio</div>
+
+          <!-- Simple nav links (single page anchors) -->
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#certs">Chứng chỉ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+          </ul>
+        </nav>
+
+        <!-- Banner content -->
+        <div class="banner-content container">
+          <div class="avatar" aria-hidden="true">
+            <!-- simple circular -->
+            <img src="./assets/personal_picture.png" alt="Ảnh cá nhân">
+          </div>
+
+          <div class="intro">
+            <h1>Nguyễn Mạnh Hiền</h1>
+            <p class="lead">Frontend Developer • Thiết kế web — HTML &amp; CSS</p>
+            <p class="meta">Địa chỉ: TP Hồ Chí Minh • Email: nh4112005@gmail.com • Tuổi: 20</p>
+            <div class="banner-cta">
+              <a href="#projects" class="btn">Xem dự án</a>
+              <a href="#contact" class="btn btn-outline">Liên hệ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- ABOUT / Thông tin cá nhân & nghề nghiệp & sở thích -->
+      <section id="about" class="section container">
+        <div class="two-col">
+          <div class="card">
+            <h2>Thông tin cá nhân</h2>
+            <p><strong>Họ và tên:</strong> Nguyễn Mạnh Hiền</p>
+            <p><strong>Ngày sinh:</strong> 04/11/2005 </p>
+            <p><strong>Địa chỉ:</strong> TP Hồ Chí Minh, Việt Nam</p>
+            <p><strong>Tóm tắt:</strong> Sinh viên ngành Công nghệ thông tin, đam mê frontend, thích xây dựng giao diện, responsive và thân thiện người dùng.</p>
+            <hr>
+            <h3>Sở thích</h3>
+            <ul class="hobbies">
+              <li>🎧 Nghe nhạc</li>
+              <li>💻 Lập trình</li>
+              <li>📷 Chụp ảnh</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Thông tin nghề nghiệp</h2>
+            <p><strong>Vị trí mong muốn:</strong> Junior/Mid Frontend Developer</p>
+            <p><strong>Mục tiêu:</strong> Hoàn thiện kỹ năng CSS, UI/UX, và chuyển sang làm việc chuyên nghiệp trong team Agile.</p>
+            <hr>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS / Ngôn ngữ & Kỹ năng -->
+      <section id="skills" class="section alt container">
+        <h2 class="section-title">Ngôn ngữ &amp; Kỹ năng</h2>
+
+        <!-- Skills layout -->
+        <div class="skills-grid">
+          <!-- Skill item with CSS-only progress bars -->
+          <div class="skill">
+            <h4>HTML</h4>
+            <div class="bar"><span class="p90" style="--value:90%">90%</span></div>
+          </div>
+
+          <div class="skill">
+            <h4>CSS (Flexbox, Grid, Animations)</h4>
+            <div class="bar"><span class="p85" style="--value:85%">85%</span></div>
+          </div>
+
+          <div class="skill">
+            <h4>Responsive Design</h4>
+            <div class="bar"><span class="p80" style="--value:80%">80%</span></div>
+          </div>
+
+          <div class="skill">
+            <h4>JavaScript (cơ bản)</h4>
+            <div class="bar"><span class="p60" style="--value:60%">70%</span></div>
+          </div>
+
+          <div class="skill">
+            <h4>Tiếng Anh</h4>
+            <div class="bar"><span class="p70" style="--value:70%">70%</span></div>
+          </div>
+
+          <div class="skill">
+            <h4>Design / Figma</h4>
+            <div class="bar"><span class="p55" style="--value:55%">55%</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS / Dự án -->
+      <section id="projects" class="section container">
+        <h2 class="section-title">Dự án tiêu biểu</h2>
+        <p class="muted">Mỗi thẻ mô tả dự án có ảnh, mô tả ngắn và link demo.</p>
+
+        <div class="projects-grid">
+          <!-- Project card 1 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <!-- simple CSS background-->
+              <img src="./assets/thumb1.png" alt="Ảnh dự án trình nghe nhạc">
+            </div>
+            <div class="project-body">
+              <h3>Web site nghe nhạc</h3>
+              <p>Giao diện responsive, sử dụng Grid &amp; Flexbox, form liên hệ đơn giản.</p>
+              <p class="project-meta"><strong>Công nghệ:</strong> HTML, CSS</p>
+              <a class="project-link" href="https://github.com/Hien-LL/music-player" aria-label="Xem demo dự án 1">Xem demo</a>
+            </div>
+          </article>
+
+          <!-- Project card 2 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div class="thumb-bg">Trang portfolio</div>
+            </div>
+            <div class="project-body">
+              <h3>Portfolio cá nhân</h3>
+              <p>Mẫu Portfolio một trang, dark mode, focus vào hiển thị kỹ năng và dự án.</p>
+              <p class="project-meta"><strong>Công nghệ:</strong> HTML, CSS</p>
+              <a class="project-link" href="#" aria-label="Xem demo dự án 2">Xem demo</a>
+            </div>
+          </article>
+          <!-- Project card 3 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div class="thumb-bg">Cổng thông tin việc làm</div>
+            </div>
+            <div class="project-body">
+              <h3>Cổng thông tin việc làm</h3>
+              <p>Giúp các doanh nghiệp và người tìm việc có thể kết nối.</p>
+              <p class="project-meta"><strong>Công nghệ:</strong> HTML, CSS</p>
+              <a class="project-link" href="https://github.com/Hien-LL/Job-portal" aria-label="Xem demo dự án 3">Xem demo</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CERTIFICATES-->
+      <section id="certs" class="section alt container">
+        <h2 class="section-title">Chứng chỉ &amp; Giải thưởng</h2>
+        <ul class="cert-list">
+          <li><strong>Chứng chỉ Lập trình web cơ bản</strong> — Trường GTVT tp HCM</li>
+          <li><strong>Chứng chỉ hoàn thành khóa học HTML CSS</strong> — Do F8 cung cấp</li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section container">
+        <h2 class="section-title">Liên hệ</h2>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Thông tin liên hệ</h3>
+            <p><strong>Email:</strong> nh4112005@gmail.com</p>
+            <p><strong>Số điện thoại:</strong> 037 446 664 78 (mẫu)</p>
+          </div>
+
+          <div class="card">
+            <h3>Gửi tin nhắn</h3>
+
+            <!-- Form HTML -->
+            <form class="contact-form" action="#" method="post" onsubmit="return false;">
+              <label>
+                Tên
+                <input type="text" name="name" required placeholder="Tên của bạn">
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required placeholder="email@example.com">
+              </label>
+              <label>
+                Tin nhắn
+                <textarea name="message" rows="5" required placeholder="Nội dung..."></textarea>
+              </label>
+              <button type="submit" class="btn">Gửi</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2025 Nguyễn Mạnh Hiền — Portfolio mẫu. Mọi nội dung là ví dụ để học tập.</p>
+        <p class="muted">Code sạch &amp; comment: có trong file HTML/CSS.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
