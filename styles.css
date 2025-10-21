@@ -102,11 +102,30 @@ body{
 }
 
 /* NAV */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
 .nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:8px 0;
+  position: fixed;        /* Giữ nav cố định trên màn hình */
+  top: 0;                 /* Dính sát mép trên */
+  left: 0;
+  width: 100%;            /* Chiếm toàn chiều rộng */
+  z-index: 1000;          /* Nằm trên các phần khác */
+  background-color: rgba(20, 20, 20, 0.9); /* màu nền mờ */
+  backdrop-filter: blur(6px);              /* hiệu ứng mờ nền (nếu hỗ trợ) */
+  transition: background-color 0.3s ease;
+}
+.nav.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .brand{
   font-weight:700;
@@ -121,7 +140,36 @@ body{
   border-radius:8px;
   transition:color .15s, background .15s;
 }
-.nav-links a:hover{color:var(--text); background: rgba(255,255,255,0.02)}
+.nav-links a:hover{
+  color:var(--text);
+  background: rgba(255,255,255,0.02)
+}
+.nav-links a.active {
+  color: #00c48c; /* xanh lá ngọc */
+  border-bottom: 2px solid #00c48c;
+}
+
+
+/* Khi cuộn thì nav sẽ có nền mờ hơn */
+.nav.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hiện dần khi cuộn xuống */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Banner content layout */
 .banner-content{
@@ -277,3 +325,7 @@ body{
   to {transform: translateX(0); opacity:1}
 }
 .skill{animation: slideIn .45s ease both}
+
+html {
+  scroll-behavior: smooth;
+}
